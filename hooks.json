@@ -1,0 +1,17 @@
+{
+  "audit-guard": {
+    "enabled": true,
+    "PostToolUse": [
+      {
+        "matcher": "write_file|edit_file|run_command|write_to_file|replace_file_content|multi_replace_file_content",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /home/kizajosmladjibacije/judge/judge-guard-core/scripts/log_audit.py",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}
